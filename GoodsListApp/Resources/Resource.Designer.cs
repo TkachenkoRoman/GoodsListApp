@@ -64,7 +64,19 @@ namespace GoodsListApp
 		{
 			
 			// aapt resource value: 0x7f060000
-			public const int MyButton = 2131099648;
+			public const int linearLayout1 = 2131099648;
+			
+			// aapt resource value: 0x7f060004
+			public const int listViewGoodsMain = 2131099652;
+			
+			// aapt resource value: 0x7f060003
+			public const int textViewGoodsListEmpty = 2131099651;
+			
+			// aapt resource value: 0x7f060001
+			public const int textViewName = 2131099649;
+			
+			// aapt resource value: 0x7f060002
+			public const int textViewQuantity = 2131099650;
 			
 			static Id()
 			{
@@ -80,7 +92,10 @@ namespace GoodsListApp
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int GoodsListItemTemplate = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{

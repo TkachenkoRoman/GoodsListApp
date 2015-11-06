@@ -5,26 +5,47 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.Collections.Generic;
 
 namespace GoodsListApp
 {
     [Activity(Label = "GoodsListApp", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
+        private ListView listViewGoodsMain;
+        private List<GoodsItem> GoodsItemsList;
+        private GoodsItemsAdapter MyGoodsItemsAdapter;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
+
             SetContentView(Resource.Layout.Main);
+            listViewGoodsMain = FindViewById<ListView>(Resource.Id.listViewGoodsMain);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+            //Create an empty list of Service List
+            GoodsItemsList = new List<GoodsItem>() {
+                new GoodsItem()
+                {
+                    Id = 1,
+                    Quantity = 1,
+                    Name = "Пельмешки"
+                },
+                new GoodsItem()
+                {
+                    Id = 2,
+                    Quantity = 1,
+                    Name = "Макарохи"
+                }
+            };
+            MyGoodsItemsAdapter = new GoodsItemsAdapter(this, GoodsItemsList);
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            listViewGoodsMain.Adapter = MyGoodsItemsAdapter;
+            var emptyText = FindViewById<TextView>(Resource.Id.textViewGoodsListEmpty);
+            listViewGoodsMain.EmptyView = emptyText;
+
         }
     }
 }
