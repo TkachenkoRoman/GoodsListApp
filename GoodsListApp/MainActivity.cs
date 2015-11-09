@@ -25,21 +25,11 @@ namespace GoodsListApp
             SetContentView(Resource.Layout.Main);
             listViewGoodsMain = FindViewById<ListView>(Resource.Id.listViewGoodsMain);
 
-            //Create an empty list of Service List
-            GoodsItemsList = new List<GoodsItem>() {
-                new GoodsItem()
-                {
-                    Id = 1,
-                    Quantity = 1,
-                    Name = "Пельмешки"
-                },
-                new GoodsItem()
-                {
-                    Id = 2,
-                    Quantity = 1,
-                    Name = "Макарохи"
-                }
-            };
+
+            GoodsItemsList = new List<GoodsItem>(); 
+            GoodsItemsList.Add(new GoodsItem() { Id = 1, Quantity = 1, Name = "Пельмешки"});
+            GoodsItemsList.Add(new GoodsItem() { Id = 2, Quantity = 2, Name = "Сосисоны" });
+             
             MyGoodsItemsAdapter = new GoodsItemsAdapter(this, GoodsItemsList);
 
             listViewGoodsMain.Adapter = MyGoodsItemsAdapter;

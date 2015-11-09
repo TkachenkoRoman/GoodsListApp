@@ -45,10 +45,19 @@ namespace GoodsListApp
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int button = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int monoandroidsplash = 2130837505;
+			public const int colors_button = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int EditTextStyle = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int Icon = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int monoandroidsplash = 2130837508;
 			
 			static Drawable()
 			{
@@ -63,14 +72,20 @@ namespace GoodsListApp
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060004
+			public const int Button01 = 2131099652;
+			
+			// aapt resource value: 0x7f060003
+			public const int EditTextNewProduct = 2131099651;
+			
 			// aapt resource value: 0x7f060000
 			public const int linearLayout1 = 2131099648;
 			
-			// aapt resource value: 0x7f060004
-			public const int listViewGoodsMain = 2131099652;
+			// aapt resource value: 0x7f060006
+			public const int listViewGoodsMain = 2131099654;
 			
-			// aapt resource value: 0x7f060003
-			public const int textViewGoodsListEmpty = 2131099651;
+			// aapt resource value: 0x7f060005
+			public const int textViewGoodsListEmpty = 2131099653;
 			
 			// aapt resource value: 0x7f060001
 			public const int textViewName = 2131099649;
